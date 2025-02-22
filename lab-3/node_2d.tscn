@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxdkrlkwgkpam"]
+
+[ext_resource type="PackedScene" uid="uid://u1gqeahhlf0r" path="res://icon.tscn" id="1_y3ip5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" parent="." instance=ExtResource("1_y3ip5")]
