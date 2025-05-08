@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs4gcsewosl3u"]
+
+[ext_resource type="Texture2D" uid="uid://bukq5mbxlkpuj" path="res://sky-blue-background-watercolor-background-design-blue-grunge-texture-photo.jpg" id="1_0cpw7"]
+[ext_resource type="Texture2D" uid="uid://d0s44gwm6vvui" path="res://pngtree-blue-cartoon-fish-sticker-on-a-white-background-vector-png-image_6892122.png" id="2_i5cnr"]
+
+[node name="Water" type="Sprite2D"]
+position = Vector2(580, 321)
+scale = Vector2(0.331803, 0.330357)
+texture = ExtResource("1_0cpw7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1371.3, -710.594)
+texture = ExtResource("2_i5cnr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-1265.81, 212.649)
+texture = ExtResource("2_i5cnr")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(63.2908, -368.541)
+scale = Vector2(1, 1.62673)
+texture = ExtResource("2_i5cnr")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(988.955, 412.432)
+scale = Vector2(2.29156, 1)
+texture = ExtResource("2_i5cnr")

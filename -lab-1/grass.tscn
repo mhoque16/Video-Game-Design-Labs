@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjtusaxx7y6fm"]
+
+[ext_resource type="Texture2D" uid="uid://cd3gq61rn4kgv" path="res://pngtree-green-seaweed-clipart-design-png-image_6109503.png" id="1_mnthj"]
+
+[node name="Grass" type="Sprite2D"]
+position = Vector2(580, 321)
+scale = Vector2(0.331803, 0.330357)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1039.77, 768.865)
+texture = ExtResource("1_mnthj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1039.77, 768.865)
+texture = ExtResource("1_mnthj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(-825.791, 853.622)
+texture = ExtResource("1_mnthj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1422.53, 793.081)
+texture = ExtResource("1_mnthj")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(1082.38, 510.757)
+scale = Vector2(4.55194, 2.85436)
+texture = ExtResource("1_mnthj")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(-494.269, 853.622)
+texture = ExtResource("1_mnthj")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(-1223.62, 93.8379)
+scale = Vector2(6.79558, 5.40211)
+texture = ExtResource("1_mnthj")

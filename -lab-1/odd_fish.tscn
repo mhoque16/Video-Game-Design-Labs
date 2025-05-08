@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5yxxfdripi6s"]
+
+[ext_resource type="Texture2D" uid="uid://c4bgan37syv5c" path="res://pngtree-cute-yellow-and-blue-cartoon-fish-illustration-png-image_15753862.png" id="1_o2da4"]
+
+[node name="OddFish" type="Sprite2D"]
+position = Vector2(276, 176)
+scale = Vector2(0.213889, 0.277778)
+texture = ExtResource("1_o2da4")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_top = 0.226
+anchor_bottom = 0.226
+offset_left = 818.0
+offset_top = 1059.64
+offset_right = 2118.0
+offset_bottom = 1297.64
+theme_override_font_sizes/font_size = 70
+text = "Fish Found
+ 
+"
