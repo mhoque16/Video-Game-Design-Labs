@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://djfftsw65lvm5"]
+
+[ext_resource type="Script" path="res://character_body_3d.gd" id="1_dhkib"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pufc2"]
+sky_top_color = Color(0.32517, 0.458381, 0.616624, 1)
+sky_horizon_color = Color(0.807811, 0.591196, 0.589985, 1)
+ground_bottom_color = Color(0.861588, 0.562624, 0.690651, 1)
+
+[sub_resource type="Sky" id="Sky_bf1qt"]
+sky_material = SubResource("ProceduralSkyMaterial_pufc2")
+
+[sub_resource type="Environment" id="Environment_sun85"]
+background_mode = 2
+sky = SubResource("Sky_bf1qt")
+tonemap_mode = 2
+tonemap_exposure = 0.8
+tonemap_white = 1.67
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f35nd"]
+albedo_color = Color(0.923601, 0.728294, 0.89839, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3t2se"]
+radius = 10.0
+height = 40.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q3vqb"]
+radius = 10.0
+height = 40.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.770035, 0, -0.638002, 0, 1, 0, 0.638002, 0, -0.770035, -235.46, 165.825, 25.4054)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sun85")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.931413, 0.0111042, 0.363795, -0.0100832, 0.999938, -0.00470568, -0.363825, 0.000714725, 0.931467, 7.61349, -3.87004, -0.929638)
+use_collision = true
+size = Vector3(300, 30, 300)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.999992, -0.00404921, 0, 0.00404921, -0.999992, 0, 0, 0, 1, -66.015, 46.9824, -9.23636)
+use_collision = true
+size = Vector3(40.7947, 15.3846, 60.3369)
+material = SubResource("StandardMaterial3D_f35nd")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.999977, -0.00673698, 0, 0.00673698, -0.999977, 0, 0, 0, 1, -17.4483, 30.3878, -18.2307)
+use_collision = true
+size = Vector3(32.0554, 15.3846, 60.3369)
+material = SubResource("StandardMaterial3D_f35nd")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_dhkib")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.2207, 34.3413, 10.3406)
+mesh = SubResource("CapsuleMesh_3t2se")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(-0.731203, 0.0107769, -0.682075, -0.0787239, -0.994528, 0.0686804, -0.677602, 0.103915, 0.72805, 85.221, 34.341, 10.341)
+shape = SubResource("CapsuleShape3D_q3vqb")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(0.99711, -0.0759707, 0, 0.0759707, 0.99711, 0, 0, 0, 1, 107.757, 49.1631, 96.0888)
+fov = 112.5
